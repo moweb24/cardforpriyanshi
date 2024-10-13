@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Card for Priyanshi</title>
+    <style>
+        body {
+            background: url('https://i.pinimg.com/enabled/564x/0f/33/29/0f33294739309dbabc66eade4e848a6b.jpg') no-repeat center center fixed; 
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            flex-direction: column;
+        }
+
+        .card {
+            width: 300px;
+            height: 200px;
+            background: linear-gradient(145deg, #ff7eb9, #ff65a3);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.7em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 20px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 15px 30px rgba(255, 105, 180, 0.6);
+        }
+
+       .message {
+            display: none;
+            margin-top: 20px;
+            font-size: 2.5em; /* Increased font size for impact */
+            color: #ff69b4; /* Pink color */
+            animation: fadeIn 1s ease-in-out;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.8); /* Light background with transparency */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            transition: all 0.3s ease;
+            transform: scale(0.9); /* Scale down for effect */
+        }
+
+        .flower {
+            display: none;
+            margin-top: 30px;
+            width: 200px; /* Adjusted width for better visibility */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card" id="card">
+        <span>Here’s a card for you!</span>
+    </div>
+
+    <div class="message" id="message">I Love You Priyanshi!</div>
+
+    <img src="https://media.tenor.com/2csFlkJ3TyAAAAAi/tkthao219-bubududu.gif" class="flower" id="flower" alt="Animated Flower" />
+
+    <script>
+        const card = document.getElementById('card');
+        const message = document.getElementById('message');
+        const flower = document.getElementById('flower');
+
+        card.addEventListener('click', function() {
+            // Show the message and flower
+            message.style.display = 'block';
+            flower.style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
